@@ -9,7 +9,7 @@ spec:
   selector:
     app: myinsuranceappwilliams
   ports:
-  - port: 50050
+  - port: 5000
     targetPort: http
     nodePort: 32410
     protocol: TCP    
