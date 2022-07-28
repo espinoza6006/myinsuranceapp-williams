@@ -1,0 +1,35 @@
+{% extends 'base.html' %} {% block content %}
+<html>
+
+<head>
+    <title>Flask Intro - login page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to My Insurance App</h1>
+        <h3>Please login</h3>
+        <br>
+        <section class="col-sm-6">
+            <form action="" method="POST">
+                {% if error %}
+                <div class="alert alert-danger" role="alert" "">{{ error }}</div>
+                {% endif %}
+                <div class="row mb-3">
+                    <input type="email" class="form-control" placeholder="email" name="email" value="{{request.form.email }}">
+                </div>
+                <div class="row mb-3">
+                    <input type="password" class="form-control" placeholder="Password" name="password" value="{{request.form.password }}">
+                </div>
+                <div class="row mb-3">
+                    <input class="btn btn-primary" type="submit" value="Login">
+                </div>
+            </form>
+        </section>
+    </div>
+</body>
+
+</html>
+{% endblock %}

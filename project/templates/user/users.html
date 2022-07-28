@@ -1,0 +1,16 @@
+{% extends '/base.html' %}
+{% block content %}
+<h1>{% block title %} Users {% endblock %}</h1>
+<br>
+
+{% for user in users %}
+<a href="{{ url_for('user', user_id=user['id']) }}">
+    <h2>{{ user['fullname'] }}</h2>
+</a>
+<span class="badge badge-primary">{{ user['created'] }}</span>
+<a href="{{ url_for('edituser', id=user['id']) }}">
+    <span class="badge badge-warning">Edit</span>
+</a>
+<hr> {% endfor %}
+<a class="btn btn-secondary" href="{{url_for('createuser')}}">New User</a>
+{% endblock %}

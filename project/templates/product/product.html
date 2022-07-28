@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>{% block name %} {{ product['name'] }} {% endblock %}</h2>
+    <span class="badge badge-primary">{{ product['created'] }}</span>
+    <p>{{ product['description'] }}</p>
+    <p>{{ product['cost'] }} €</p>
+    <p>{{  'Active' if product['is_active'] else 'No active' }}</p>
+{% endblock %}

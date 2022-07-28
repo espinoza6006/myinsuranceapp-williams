@@ -1,0 +1,14 @@
+{% extends '/base.html' %} 
+{% block content %}
+<h1>{% block title %} Products {% endblock %}</h1>
+{% for product in products %}
+<a href="{{ url_for('product', product_id=product['id']) }}">
+    <h2>{{ product['name'] }}</h2>
+</a>
+<span class="badge badge-primary">{{ product['created'] }}</span>
+<a href="{{ url_for('editproduct', id=product['id']) }}">
+    <span class="badge badge-warning">Edit</span>
+</a>
+<hr> {% endfor %} 
+<a class="btn btn-secondary" href="{{url_for('createproduct')}}">New Product</a>
+{% endblock %}

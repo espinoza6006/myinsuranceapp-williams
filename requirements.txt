@@ -1,0 +1,5 @@
+Flask
+Flask-login
+Flask-DebugToolbar
+Flask-JWT-Extended
+Flask_Session 
