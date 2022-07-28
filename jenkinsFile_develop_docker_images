@@ -44,15 +44,7 @@ pipeline {
         } 
     }
     post {
-        always {
-            echo 'post do this always...'
-        }
-        success{
-            echo 'post do this when success...'
-        }
-        failure {
-            echo 'post do this when failure...'
-        }
+        
         cleanup{
             echo 'post do this when cleanup...'
             deleteDir()
