@@ -9,7 +9,7 @@ spec:
     app: myinsuranceappwilliams
   type: NodePort
   ports:
-  - port: 5050
+  - port: 5000
     targetPort: http
     nodePort: 32163 #30000-32767
     protocol: TCP
