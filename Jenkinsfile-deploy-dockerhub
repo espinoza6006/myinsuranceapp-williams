@@ -47,17 +47,18 @@ pipeline {
             steps {
                 withKubeConfig([credentialsId: 'k8-credentials']) {
                     sh 'kubectl apply -f kubernetes/1-myinsuranceapp_deployment_dockerHub.yaml'
-                    sh 'kubectl apply -f kubernetes/2-myinsuranceapp_services_dockerHub .yaml'
+                    sh 'kubectl apply -f kubernetes/2-myinsuranceapp_services_dockerHub.yaml'
                     sh 'kubectl port-forward service/myinsuranceapp 5000:5000 &'
                 }
             }
         }
-        stage('External acceptance tests') {
+        
+        /* stage('External acceptance tests') {
             steps{
                 echo 'External acceptance tests...'
                 sh 'python3 -m unittest discover -s tests/acceptance-request -v'
             }
-        }
+        } */
     }
     post {
         
