@@ -34,7 +34,7 @@ pipeline {
             } // donde azcsmyinsuranceapp.azurecr.io es el login server
             // csmyinsuranceapp:v1 es el nombre de la imagen creada en dockerhub
         } 
-        stage('Publish image') {
+        stage('Publish image') { // publicando imagen
             steps {
                 echo 'pushing image...'
                 withDockerRegistry([ credentialsId: "docker-hub-credentials", url: "" ]) {
