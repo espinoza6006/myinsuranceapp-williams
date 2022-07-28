@@ -30,7 +30,7 @@ pipeline {
         stage('Create image') {
             steps {
                 echo 'creating image...'
-                sh 'docker build -t espinoza6006/myinsuranceappwilliams:v8 -f dockerFile .'
+                sh 'docker build -t espinoza6006/myinsuranceappwilliams:v9 -f dockerFile .'
                 
             }
         } 
@@ -38,7 +38,7 @@ pipeline {
             steps {
                 echo 'pushing image..'
                 withDockerRegistry([ credentialsId: "docker-hub-credentials", url: "" ]) {
-                    sh 'docker push espinoza6006/myinsuranceappwilliams:v8'
+                    sh 'docker push espinoza6006/myinsuranceappwilliams:v9'
                 }
                
             }
