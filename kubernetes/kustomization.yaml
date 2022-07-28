@@ -1,0 +1,5 @@
+resources:
+  - 1-myinsuranceapp_deployment_dockerHub.yaml
+  - 2-myinsuranceapp_services_dockerHub.yaml
+  - 3-myensuranceapp_deployment-az.yaml
+  - 4-myinsuranceapp_services-az .yaml

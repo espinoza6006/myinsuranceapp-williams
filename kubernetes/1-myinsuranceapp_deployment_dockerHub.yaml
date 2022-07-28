@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myinsuranceappwilliams-deployment
+  labels:
+    app:  myinsuranceappwilliams
+spec:
+  replicas: 8
+  selector:
+    matchLabels:
+      app:  myinsuranceappwilliams
+  template:
+    metadata:
+      labels:
+        app: myinsuranceappwilliams
+    spec:
+      containers:
+      - name: myinsuranceappwilliams-deployment
+        image: espinoza6006/myinsuranceappwilliams:v8
+        ports:
+        - name: http
+          containerPort: 5000
