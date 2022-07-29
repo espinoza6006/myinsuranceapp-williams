@@ -15,7 +15,7 @@ spec:
         app: myinsuranceappwilliams
     spec:
       containers:
-      - name: myinsuranceappwilliams-deployment
+      - name: myinsuranceappwilliams
         image: espinoza6006/myinsuranceappwilliams:v8
         ports:
         - name: http
