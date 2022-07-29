@@ -31,8 +31,7 @@ pipeline {
             steps {
                 echo 'creating image...'
                 sh 'docker build -t espinoza6006/myinsuranceappwilliams:v9 -f dockerFile .'
-            } // donde azcsmyinsuranceapp.azurecr.io es el login server
-            // csmyinsuranceapp:v1 es el nombre de la imagen creada en dockerhub
+            } 
         } 
         stage('Publish image') { // publicando imagen
             steps {
