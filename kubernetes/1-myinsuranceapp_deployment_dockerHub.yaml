@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: myinsuranceappwilliams
-        image: espinoza6006/myinsuranceappwilliams:v8
+        image: espinoza6006/myinsuranceappwilliams:v9
         ports:
         - name: http
           containerPort: 5000
