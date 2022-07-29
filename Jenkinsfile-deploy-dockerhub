@@ -48,7 +48,7 @@ pipeline {
                 withKubeConfig([credentialsId: 'k8-credentials']) {
                     sh 'kubectl apply -f kubernetes/1-myinsuranceapp_deployment_dockerHub.yaml'
                     sh 'kubectl apply -f kubernetes/2-myinsuranceapp_services_dockerHub.yaml'
-                    sh 'kubectl port-forward service/myinsuranceapp 5050:5000 &'
+                    sh 'kubectl port-forward service/myinsuranceappwilliams-service 5050:5000 &'
                 }
             }
         }
