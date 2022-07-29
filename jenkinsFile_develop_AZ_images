@@ -30,7 +30,7 @@ pipeline {
         stage('Create image') {
             steps {
                 echo 'creating image...'
-                sh 'docker build -t hackathonimages.azurecr.io/myinsuranceappwilliams:v9 -f dockerFile .'
+                sh 'docker build -t hackathonimages.azurecr.io/myinsuranceappwilliams:v8 -f dockerFile .'
             } // donde azcsmyinsuranceapp.azurecr.io es el login server
             // csmyinsuranceapp:v1 es el nombre de la imagen creada en dockerhub
         } 
@@ -38,7 +38,7 @@ pipeline {
             steps {
                 echo 'pushing image...'
                 withDockerRegistry([ credentialsId: "az-credentials-hackathon", url: "https://hackathonimages.azurecr.io" ]) {
-                    sh 'docker push hackathonimages.azurecr.io/myinsuranceappwilliams:v9'
+                    sh 'docker push hackathonimages.azurecr.io/myinsuranceappwilliams:v8'
                 }
             }
         } 
