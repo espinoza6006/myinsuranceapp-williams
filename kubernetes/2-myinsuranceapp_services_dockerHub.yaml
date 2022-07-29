@@ -11,6 +11,6 @@ spec:
   ports:
   - port: 5000
     targetPort: http
-    nodePort: 32163 #30000-32767
+    #nodePort: 32163 #30000-32767
     protocol: TCP
     name: http
